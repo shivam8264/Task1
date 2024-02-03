@@ -35,6 +35,32 @@ window.onmousemove = e => handleOnMove(e);
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+.background-section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.back-image {
+  background-image: url('Images_Project/img10.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -48,11 +74,12 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(0%, -50%); 
-  user-select: none; /* -- Prevent image highlighting -- */
+  transform: translate(0%, -50%);
+  user-select: none;
+  /* -- Prevent image highlighting -- */
 }
 
-#image-track  .image {
+#image-track .image {
   width: 40vmin;
   height: 60vmin;
   object-fit: cover;
@@ -60,8 +87,216 @@ body {
   object-position: 100% center;
 }
 
-
 .content h1:hover{
     -webkit-text-stroke: 2px white;
     color: transparent;
 }
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Test</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <section class="background-section">
+    <div class="back-image">
+    </div>
+  </section>
+
+  <section class="image-section">
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      <img class="image" src="Images_Project/img1.avif" draggable="false" />
+      <img class="image" src="Images_Project/img2.avif" draggable="false" />
+      <img class="image" src="Images_Project/img3.webp" draggable="false" />
+      <img class="image" src="Images_Project/img4.avif" draggable="false" />
+      <img class="image" src="Images_Project/img5.avif" draggable="false" />
+      <img class="image" src="Images_Project/img6.avif" draggable="false" />
+      <img class="image" src="Images_Project/img7.avif" draggable="false" />
+      <img class="image" src="Images_Project/img8.avif" draggable="false" />
+    </div>
+  </section>
+  <div class="text">
+    <button type="button" class="btn btn-light">Primary</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+--------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="nav">
+            <div id="nav-part1">
+                <h3>Menu</h3>
+                <i class="ri-menu-2-line"></i>
+            </div>
+            <div id="nav-part2">
+                <h1>Dentytech</h1>
+            </div>
+            <div id="nav-part3">
+                <button>Log in</button>
+                <button style="background-color: orangered;" id="btn2">Sign up</button>
+            </div>
+        </div> 
+        <h1>Our Advantages</h1>
+        
+        <img id="img1" src="Images_Project/img1.avif" alt="">
+        <img id="img2"src="Images_Project/img2.avif" alt="">
+        <img id="img3"src="Images_Project/img13.avif" alt="">
+        <img id="img4" src="Images_Project/img4.avif" alt="">
+
+        <h5 id="btm-left">Your Smile, Our Passion </h5>
+        <div id="btm-right">
+            <i class="ri-instagram-line"></i>
+            <i class="ri-youtube-line"></i>
+            <i class="ri-facebook-box-line"></i>
+            
+        </div>
+        <h3>Best Start Up of 2023</h3>
+        
+    </div>  
+</body>
+</html>
+
+
+
+*{ 
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+    /* background-color: beige; */
+} 
+html,body{
+    height: 100%;
+    width: 100%;
+} 
+#main{
+    height: 100%;
+    width: 100%;
+    background-color:beige;
+}
+#nav{
+    height: 100px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px ;
+}
+#nav-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center  ;
+    gap: 3px;
+}
+#nav-part1 h3{
+    font-size: 17px;
+    border: 2px solid #000;
+    padding: 5px 10px;
+    border-radius:  50px;
+    font-weight: 500; 
+}
+#nav-part1 i{  
+    border: 2px solid #000;
+    padding: 5px 7px; 
+    border-radius:  50px;
+}
+#nav h1{
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+#nav button{
+    padding: 7px 12px;
+    border-radius: 50px; 
+    border: 1.5px solid #000; 
+    font-size: 16px;
+    font-weight: 600;
+    background-color: white;
+}
+#btn2 { 
+    /* background-color:orangered; */
+    color:white; 
+    border : none;
+}
+#main>h1{ /*main direct andar wala h1 */
+    font-size: 149px;
+    text-transform: uppercase;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+    font-weight: 433;
+}
+img{  
+    height: 480px;
+    width: 370px;
+    object-position: top;
+    object-fit: cover;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+    /* border: 0.5px solid #000; */
+} 
+#img1{
+    transform: translate(-50%,-50%) rotate(-27deg); 
+}
+#img2{
+    transform: translate(-50%,-50%) rotate(-18deg);
+}
+#img3{
+    transform: translate(-50%,-50%) rotate(-9deg);   
+}
+#btm-left{
+    position: absolute;
+    bottom: 5%; 
+    left: 5%;
+    font-size: 17px;
+}
+#btm-right{
+    position: absolute;
+    bottom:10%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:19px;
+    font-size: 30px;
+}
+#main>h3{
+    position: absolute;
+    bottom:5%;
+    right: 5%;
+    font-size: 12px;
+
+}
+
